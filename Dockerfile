@@ -5,6 +5,7 @@ ARG MEDPLUM_BRANCH=main
 # Install OS dependencies
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends supervisor \
+    && apt-get -y install apt-utils \
     && rm -rf /var/lib/apt/lists/*
 
 # Clone source code and build
